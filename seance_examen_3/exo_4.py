@@ -14,7 +14,7 @@ def spirale(matrice: list[list[int]]) -> list[int]:
         return [row[0] for row in matrice]
 
     # TOP
-    ans = matrice[0]
+    ans = list(matrice[0])
     # RIGHT
     ans += [row[-1] for row in matrice[1:len(matrice)-1]]
     # BOT
