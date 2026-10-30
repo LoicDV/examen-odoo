@@ -11,6 +11,8 @@ def parentheses_equilibrees(s: str) -> str:
         if char in ("(", "[", "{"):
             queue.append(char)
         elif char in (")", "]", "}"):
+            if not queue:
+                return "false"
             checker = dict_check[queue.pop()]
             if checker != char:
                 return "false"
