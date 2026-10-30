@@ -2,13 +2,13 @@ def identifiant_valide(nom: str) -> str:
     # Démarche :
     # 1. check des regles sinon "false" sans test le reste
     # 2. faire les tests des plus simples en temps vers le plus gourmand
+    if 4 > len(nom) or len(nom) > 25:
+        return "false"
+
     if not nom[0].isalpha():
         return "false"
 
     if nom[-1] == "_":
-        return "false"
-
-    if 4 > len(nom) or len(nom) > 25:
         return "false"
 
     check_alpha = set("azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN")
