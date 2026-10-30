@@ -20,7 +20,7 @@ def spirale(matrice: list[list[int]]) -> list[int]:
     # BOT
     ans += matrice[-1][::-1]
     # LEFT
-    ans += [row[0] for row in matrice[1:len(matrice)-1]]
+    ans += [row[0] for row in matrice[1:len(matrice)-1]][::-1]
     new_matrice = [row[1:len(row)-1] for row in matrice[1:len(matrice)-1]]
     return ans + spirale(new_matrice)
 
